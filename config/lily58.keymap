@@ -17,7 +17,8 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_GUI &kp C>;
+                <&kp LEFT_GUI &kp C>,
+                <&macro_release>;
         };
         paste: paste {
             compatible = "zmk,behavior-macro";
@@ -25,7 +26,8 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_GUI &kp V>;
+                <&kp LEFT_GUI &kp V>,
+                <&macro_release>;
         };
     };
 

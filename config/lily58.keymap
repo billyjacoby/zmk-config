@@ -15,13 +15,17 @@
             compatible = "zmk,behavior-macro";
             label = "new_macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp C>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp C>;
         };
         paste: paste {
             compatible = "zmk,behavior-macro";
             label = "new_macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp V>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp V>;
         };
     };
 

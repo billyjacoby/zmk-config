@@ -76,7 +76,7 @@
         raycast {
             bindings = <&cmd_space>;
             key-positions = <53 42>;
-            layers = <0 1 2 3>;
+            layers = <>;
         };
     };
 

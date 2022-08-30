@@ -47,13 +47,36 @@
                 <&macro_release>,
                 <&kp LEFT_GUI>;
         };
+        cmd_space: cmd_space {
+            compatible = "zmk,behavior-macro";
+            label = "cmd_space";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
+        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
         tri_layer {
             if-layers = <1 2>;
             then-layer = <3>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        raycast {
+            bindings = <&cmd_space>;
+            key-positions = <53 42>;
+            layers = <0 1 2 3>;
         };
     };
 
@@ -117,7 +140,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-                raise_lower_layer {
+        raise_lower_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -126,11 +149,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-    &trans  &trans  &trans   &trans   &trans   &trans                       &trans     &trans     &trans     &trans    &trans    &trans
- &kp Q  &kp N1  &kp N2   &kp N3   &kp N4   &kp N5                       &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &trans
-    &trans  &kp F2  &kp F3   &kp F4   &kp F5   &kp F6                     &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT    &trans    &trans
-    &trans  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL   &kp LBKT  &kp RBKT  &kp BSLH
-                             &trans   &trans   &trans  &trans  &trans       &trans     &trans     &trans
+ &trans  &trans  &trans   &trans   &trans   &trans                       &trans     &trans     &trans     &trans    &trans    &trans
+  &kp Q  &kp N1  &kp N2   &kp N3   &kp N4   &kp N5                       &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &trans
+ &trans  &kp F2  &kp F3   &kp F4   &kp F5   &kp F6                     &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT    &trans    &trans
+ &trans  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL   &kp LBKT  &kp RBKT  &kp BSLH
+                          &trans   &trans   &trans  &trans  &trans       &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

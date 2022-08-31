@@ -69,6 +69,17 @@
                 <&macro_tap>,
                 <&kp GREATER_THAN>;
         };
+
+        macro_double_dot: macro_double_dot {
+            compatible = "zmk,behavior-macro";
+            label = "macro_arrow_function";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp DOT>,
+                <&macro_tap>,
+                <&kp DOT>;
+        };
     };
 
     conditional_layers {
@@ -94,7 +105,7 @@
             label = "TAP_DANCE_ARROW_FUNCTION";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings =  <&kp DOT>, <&kp DOT>, <&macro_arrow_function>;
+            bindings =  <&kp DOT>, <&macro_double_dot>, <&macro_arrow_function>;
         };
 
         td_brackets_open: tap_dance_brackets_open {

@@ -94,7 +94,7 @@
             label = "TAP_DANCE_ARROW_FUNCTION";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings =  <&kp DOT>,  <&macro_arrow_function>;
+            bindings =  <&kp DOT>, <&kp DOT>, <&macro_arrow_function>;
         };
 
         td_brackets_open: tap_dance_brackets_open {

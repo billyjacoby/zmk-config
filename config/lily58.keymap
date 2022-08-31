@@ -105,8 +105,8 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings =
-                <&kp LBKT>,
                 <&kp LEFT_PARENTHESIS>,
+                <&kp LBKT>,
                 <&kp LEFT_BRACE>;
         };
         td_brackets_close: tap_dance_brackets_close {
@@ -115,8 +115,8 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings =
-                <&kp RBKT>,
                 <&kp RIGHT_PARENTHESIS>,
+                <&kp RBKT>,
                 <&kp RIGHT_BRACE>;
         };
     };

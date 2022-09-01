@@ -81,15 +81,15 @@
     };
 
     behaviors {
-        ht_sc: hold_tap_space_command {
+        ht_tp: hold_tap_tap_preferred {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_SPACE_COMMAND";
+            label = "HOLD_TAP_TAP_PREFERRED";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             global-quick-tap;
-            bindings = <&kp SPACE &kp LEFT_GUI>;
+            bindings = <&kp &kp>;
         };
         td_arrow_function: tap_dance_arrow_function {
             compatible = "zmk,behavior-tap-dance";
@@ -148,7 +148,7 @@
           &kp TAB   &kp Q   &kp W     &kp E     &kp R   &kp T                                        &kp Y      &kp U          &kp I    &kp O     &kp P      &kp MINUS
    &kp LEFT_SHIFT   &kp A   &kp S     &kp D     &kp F   &kp G                                        &kp H      &kp J          &kp K    &kp L  &kp SEMI        &kp SQT
  &kp LEFT_CONTROL   &kp Z   &kp X     &kp C     &kp V   &kp B  &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
-                                   &kp LALT  &kp LGUI   &mo 1         &ht_sc            &kp RET   &mo 2  &kp GRAVE  &kp RIGHT_GUI
+                                   &kp LALT  &kp LGUI   &mo 1  &ht_tp SPACE LGUI            &kp RET   &mo 2  &kp GRAVE  &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

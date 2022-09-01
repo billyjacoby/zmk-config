@@ -89,7 +89,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             global-quick-tap;
-            bindings = <&kp SPACE>, <&kp LEFT_GUI>;
+            bindings = <&kp SPACE &kp LEFT_GUI>;
         };
         td_arrow_function: tap_dance_arrow_function {
             compatible = "zmk,behavior-tap-dance";

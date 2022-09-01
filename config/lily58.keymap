@@ -83,8 +83,8 @@
     behaviors {
         ht_sc: hold_tap_space_command {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_SPACE_COOMMAND";
-            #binding-cells = <0>;
+            label = "HOLD_TAP_SPACE_COMMAND";
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;

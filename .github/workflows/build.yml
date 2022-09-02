@@ -2,4 +2,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: billyjacoby/zmk/.github/workflows/build-user-config.yml@main
+    uses: infused-kim/zmk/.github/workflows/build-user-config.yml@main

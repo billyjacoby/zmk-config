@@ -12,42 +12,6 @@
 
 / {
     macros {
-        macro_copy: macro_copy {
-            compatible = "zmk,behavior-macro";
-            label = "macro_copy";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp C>,
-                <&macro_release>,
-                <&kp LEFT_GUI>;
-        };
-        macro_paste: macro_paste {
-            compatible = "zmk,behavior-macro";
-            label = "macro_paste";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp V>,
-                <&macro_release>,
-                <&kp LEFT_GUI>;
-        };
-        macro_cut: macro_cut {
-            compatible = "zmk,behavior-macro";
-            label = "macro_cut";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp X>,
-                <&macro_release>,
-                <&kp LEFT_GUI>;
-        };
         macro_cmd_space: macro_cmd_space {
             compatible = "zmk,behavior-macro";
             label = "macro_cmd_space";
@@ -69,6 +33,30 @@
                 <&kp EQUAL>,
                 <&macro_tap>,
                 <&kp GREATER_THAN>;
+        };
+        control_right: control_right {
+            compatible = "zmk,behavior-macro";
+            label = "control_right";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+        };
+        control_left: control_left {
+            compatible = "zmk,behavior-macro";
+            label = "control_left";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
         };
     };
 
@@ -164,11 +152,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-    &kp EQUAL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                                         &trans    &trans    &trans   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP     &trans
- &kp LEFT_ALT        &kp F2        &kp F3        &kp F4        &kp F5      &kp F6                                         &kp F7    &kp F8    &kp UP             &kp F10          &kp F11    &kp F12
-       &trans      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR   &kp PRCNT                                         &trans  &kp LEFT  &kp DOWN           &kp RIGHT         &kp RPAR  &kp GRAVE
-       &trans        &trans        &trans        &trans        &trans      &trans  &td_brackets_open  &td_brackets_close  &trans    &trans    &trans  &td_arrow_function           &trans     &trans
-                                                 &trans        &trans      &trans             &trans              &trans  &trans    &trans    &trans
+    &kp EQUAL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_CLR                                                 &trans    &trans    &trans   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP     &trans
+ &kp LEFT_ALT        &kp F2        &kp F3        &kp F4        &kp F5  &control_left                                         &control_right    &kp F8    &kp UP             &kp F10          &kp F11    &kp F12
+       &trans      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR         &trans                                                 &trans  &kp LEFT  &kp DOWN           &kp RIGHT         &kp RPAR  &kp GRAVE
+       &trans        &trans        &trans        &trans        &trans         &trans  &td_brackets_open  &td_brackets_close          &trans    &trans    &trans  &td_arrow_function           &trans     &trans
+                                                 &trans        &trans         &trans             &trans              &trans          &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

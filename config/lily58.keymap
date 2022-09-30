@@ -152,10 +152,10 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-    &kp EQUAL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_CLR                                                 &trans    &trans    &trans   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP     &trans
- &kp LEFT_ALT        &kp F2        &kp F3        &kp F4        &kp F5  &control_left                                         &control_right    &kp F8    &kp UP             &kp F10          &kp F11    &kp F12
-       &trans      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR         &trans                                                 &trans  &kp LEFT  &kp DOWN           &kp RIGHT         &kp RPAR  &kp GRAVE
-       &trans        &trans        &trans        &trans        &trans         &trans  &td_brackets_open  &td_brackets_close          &trans    &trans    &trans  &td_arrow_function           &trans     &trans
+    &kp EQUAL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_CLR                                                  &none     &none   &kp F12   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP     &trans
+ &kp LEFT_ALT        &kp F2        &kp F3        &kp F4        &kp F5  &control_left                                         &control_right     &none    &kp UP               &none            &none  &kp EQUAL
+       &trans      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR          &none                                                  &none  &kp LEFT  &kp DOWN           &kp RIGHT            &none  &kp GRAVE
+       &trans        &trans        &trans        &trans        &trans         &trans  &td_brackets_open  &td_brackets_close          &trans     &none     &none  &td_arrow_function            &none      &none
                                                  &trans        &trans         &trans             &trans              &trans          &trans    &trans    &trans
             >;
 
@@ -171,11 +171,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-    &trans  &trans  &trans   &trans   &trans   &trans                                              &trans     &trans     &trans     &trans    &trans    &trans
- &kp GRAVE  &kp N1  &kp N2   &kp N3   &kp N4   &kp N5                                              &kp N6     &trans     &kp UP     &kp N9    &kp N0    &trans
-    &trans  &kp F2  &kp F3   &kp F4   &kp F5   &kp F6                                              &trans   &kp LEFT   &kp DOWN  &kp RIGHT    &trans    &trans
-    &trans  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &td_brackets_open  &td_brackets_close  &kp KP_PLUS  &kp MINUS  &kp EQUAL   &kp LBKT  &kp RBKT  &kp BSLH
-                             &trans   &trans   &trans             &trans              &trans       &trans     &trans     &trans
+    &trans  &trans  &trans   &trans   &trans   &trans                                         &trans    &trans    &trans     &trans             &trans     &trans
+ &kp GRAVE  &kp N1  &kp N2   &kp N3   &kp N4   &kp N5                                          &none     &none    &kp UP      &none              &none  &kp EQUAL
+    &trans  &kp F2  &kp F3   &kp F4   &kp F5   &kp F6                                          &none  &kp LEFT  &kp DOWN  &kp RIGHT              &none     &trans
+    &trans  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &td_brackets_open  &td_brackets_close   &none     &none     &none   &kp LBKT  &kp RIGHT_BRACKET      &none
+                             &trans   &trans   &trans             &trans              &trans  &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -191,8 +191,8 @@
 
             bindings = <
  &trans      &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                  &trans    &trans    &trans     &trans  &trans  &trans
- &trans  &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG        &trans      &trans                  &trans    &trans    &kp UP     &trans  &trans  &trans
- &trans   &rgb_ug RGB_TOG             &trans             &trans        &trans      &trans                  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+ &trans  &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG        &trans      &trans                   &none     &none    &kp UP      &none  &trans  &trans
+ &trans   &rgb_ug RGB_TOG             &trans             &trans        &trans      &trans                   &none  &kp LEFT  &kp DOWN  &kp RIGHT   &none  &trans
  &trans            &trans             &trans             &trans        &trans      &trans  &trans  &trans  &trans    &trans    &trans     &trans  &trans  &trans
                                                          &trans        &trans      &trans  &trans  &trans  &trans    &trans    &trans
             >;

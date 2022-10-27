@@ -152,11 +152,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-    &kp EQUAL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_CLR                                                  &none     &none   &kp F12   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP     &trans
- &kp LEFT_ALT        &kp F2        &kp F3        &kp F4        &kp F5  &control_left                                         &control_right     &none    &kp UP               &none            &none  &kp EQUAL
-       &trans      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR          &none                                                  &none  &kp LEFT  &kp DOWN           &kp RIGHT            &none  &kp GRAVE
-       &trans        &trans        &trans        &trans        &trans         &trans  &td_brackets_open  &td_brackets_close          &trans     &none     &none  &td_arrow_function            &none      &none
-                                                 &trans        &trans         &trans             &trans              &trans          &trans    &trans    &trans
+ &kp EQUAL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_CLR                                                  &none     &none   &kp F12     &kp C_VOLUME_DOWN       &kp C_VOLUME_UP     &trans
+  &kp PLUS        &kp F2        &kp F3        &kp F4        &kp F5  &control_left                                         &control_right     &none    &kp UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp EQUAL
+    &trans      &kp EXCL        &kp AT      &kp HASH    &kp DOLLAR          &none                                                  &none  &kp LEFT  &kp DOWN             &kp RIGHT                 &none  &kp GRAVE
+    &trans        &trans        &trans        &trans        &trans         &trans  &td_brackets_open  &td_brackets_close          &trans     &none     &none    &td_arrow_function                 &none      &none
+                                              &trans        &trans         &trans             &trans              &trans          &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

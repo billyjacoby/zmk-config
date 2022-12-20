@@ -157,10 +157,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-    &kp TAB        &kp N1        &kp N2        &kp N3        &kp N4         &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
- &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4   &none   &none   &none   &none   &none     &none
-     &trans         &none         &none         &none         &none  &kp LG(SPACE)   &none   &none   &none   &none   &none     &none
-                                               &trans        &trans         &trans  &trans  &trans  &trans
+ &kp TAB        &kp N1        &kp N2        &kp N3        &kp N4         &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
+  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_CLR   &none   &none   &none   &none   &none     &none
+   &none         &none         &none         &none         &none  &kp LG(SPACE)   &none   &none   &none   &none   &none     &none
+                                            &trans        &trans         &trans  &trans  &trans  &trans
             >;
         };
 
@@ -172,9 +172,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
- &kp EQUAL        &kp EXCL           &kp AT  &kp HASH  &kp DLLR      &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR       &kp RPAR  &kp BSPC
-  &kp PLUS        &kp LBKT         &kp RBKT     &none     &none          &none      &none    &kp UP            &none     &none          &none     &none
-     &none  &kp LEFT_BRACE  &kp RIGHT_BRACE     &none     &none  &kp LG(SPACE)   &kp LEFT  &kp DOWN        &kp RIGHT     &none  &kp BACKSLASH     &none
+ &kp EQUAL        &kp EXCL           &kp AT  &kp HASH  &kp DLLR      &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY   &kp LPAR       &kp RPAR  &kp BSPC
+    &trans        &kp LBKT         &kp RBKT     &none     &none          &none      &none     &none           &kp UP      &none          &none     &none
+     &none  &kp LEFT_BRACE  &kp RIGHT_BRACE     &none     &none  &kp LG(SPACE)      &none  &kp LEFT         &kp DOWN  &kp RIGHT  &kp BACKSLASH     &none
                                                &trans    &trans         &trans     &trans    &trans           &trans
             >;
         };

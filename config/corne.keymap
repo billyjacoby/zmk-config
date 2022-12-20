@@ -142,10 +142,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-   &kp ESC   &kp Q   &kp W         &kp E   &kp R              &kp T         &kp Y   &kp U             &kp I    &kp O     &kp P          &kp BSPC
-   &kp TAB   &kp A   &kp S         &kp D   &kp F              &kp G         &kp H   &kp J             &kp K    &kp L  &kp SEMI         &kp MINUS
- &kp LSHFT   &kp Z   &kp X         &kp C   &kp V              &kp B         &kp N   &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp SINGLE_QUOTE
-                            &kp LEFT_ALT   &mo 1  &ht_tp LGUI SPACE  &lt 2 RETURN   &mo 2  &kp LEFT_CONTROL
+   &kp ESC   &kp Q   &kp W         &kp E   &kp R              &kp T      &kp Y      &kp U             &kp I    &kp O     &kp P          &kp BSPC
+   &kp TAB   &kp A   &kp S         &kp D   &kp F              &kp G      &kp H      &kp J             &kp K    &kp L  &kp SEMI         &kp MINUS
+ &kp LSHFT   &kp Z   &kp X         &kp C   &kp V              &kp B      &kp N      &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp SINGLE_QUOTE
+                            &kp LEFT_ALT   &mo 1  &ht_tp LGUI SPACE  &lt 2 RET  &kp GRAVE  &kp LEFT_CONTROL
             >;
         };
 
@@ -157,10 +157,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-    &kp TAB        &kp N1        &kp N2        &kp N3        &kp N4         &kp N5  &kp N6    &kp N7    &kp N8     &kp N9  &kp N0  &kp BSPC
- &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4   &none     &none    &kp UP      &none   &none     &none
-     &trans         &none         &none         &none         &none  &kp LG(SPACE)   &none  &kp LEFT  &kp DOWN  &kp RIGHT   &none     &none
-                                               &trans        &trans         &trans  &trans    &trans    &trans
+    &kp TAB        &kp N1        &kp N2        &kp N3        &kp N4         &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
+ &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4   &none   &none   &none   &none   &none     &none
+     &trans         &none         &none         &none         &none  &kp LG(SPACE)   &none   &none   &none   &none   &none     &none
+                                               &trans        &trans         &trans  &trans  &trans  &trans
             >;
         };
 
@@ -172,19 +172,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR      &kp PRCNT  &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
-  &none     &none   &none     &none     &none          &none  &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-  &none     &none   &none     &none     &none  &kp LG(SPACE)  &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                             &trans    &trans         &trans     &trans     &trans           &trans
+ &kp EQUAL        &kp EXCL           &kp AT  &kp HASH  &kp DLLR      &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
+  &kp PLUS        &kp LBKT         &kp RBKT     &none     &none          &none      &none    &kp UP            &none     &none     &none     &none
+     &none  &kp LEFT_BRACE  &kp RIGHT_BRACE     &none     &none  &kp LG(SPACE)   &kp LEFT  &kp DOWN        &kp RIGHT     &none  &kp PIPE     &none
+                                               &trans    &trans         &trans     &trans    &trans           &trans
             >;
         };
 
         LOWER_RAISE {
             bindings = <
- &trans   &none   &none   &none   &none       &kp LC(LEFT)       &kp RC(RIGHT)   &none   &none                  &none   &none  &trans
- &trans   &none   &none   &none   &none  &td_brackets_open  &td_brackets_close   &none   &none                  &none   &none   &none
- &trans   &none   &none   &none   &none              &none               &none   &none   &none  &macro_arrow_function   &none  &trans
-                         &trans  &trans             &trans              &trans  &trans  &trans
+ &trans   &none   &none   &none   &none       &kp LC(LEFT)       &kp RC(RIGHT)   &none  &kp F12           &kp C_VOL_DN  &kp C_VOL_UP  &trans
+ &trans   &none   &none   &none   &none  &td_brackets_open  &td_brackets_close   &none    &none                  &none         &none   &none
+ &trans   &none   &none   &none   &none              &none               &none   &none    &none  &macro_arrow_function         &none  &trans
+                         &trans  &trans             &trans              &trans  &trans   &trans
             >;
         };
     };

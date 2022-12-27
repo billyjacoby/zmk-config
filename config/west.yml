@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: billyjacoby
-      revision: corne-widgets
+      revision: overwrite-display
       import: app/west.yml
   self:
     path: config

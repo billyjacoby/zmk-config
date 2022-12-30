@@ -126,6 +126,15 @@
             global-quick-tap;
             bindings = <&kp &kp>;
         };
+        td_ctrl_opt: tap_dance_control_option {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CONTROL_OPTION";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings =
+                <&kp LEFT_CONTROL>,
+                <&kp LEFT_ALT>;
+        };
         td_arrow_function: tap_dance_arrow_function {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_ARROW_FUNCTION";
@@ -181,7 +190,7 @@
         &kp ESC   &kp Q   &kp W         &kp E   &kp R              &kp T      &kp Y      &kp U             &kp I    &kp O     &kp P          &kp BSPC
  &kp LEFT_SHIFT   &kp A   &kp S         &kp D   &kp F              &kp G      &kp H      &kp J             &kp K    &kp L  &kp SEMI         &kp MINUS
         &kp TAB   &kp Z   &kp X         &kp C   &kp V              &kp B      &kp N      &kp M         &kp COMMA  &kp DOT  &kp FSLH  &kp SINGLE_QUOTE
-                                 &kp LEFT_ALT   &mo 1  &ht_tp LGUI SPACE  &lt 2 RET  &kp GRAVE  &kp LEFT_CONTROL
+                                 &td_ctrl_opt   &mo 1  &ht_tp LGUI SPACE  &lt 2 RET  &kp GRAVE  &kp LEFT_CONTROL
             >;
         };
 

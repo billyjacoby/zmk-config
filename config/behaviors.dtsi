@@ -1,0 +1,51 @@
+/ {  behaviors {
+        ht_tp: hold_tap_tap_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_TAP_PREFERRED";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp &kp>;
+        };
+        td_ctrl_opt: tap_dance_control_option {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CONTROL_OPTION";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings =
+                <&kp LEFT_CONTROL>,
+                <&kp LEFT_ALT>;
+        };
+        td_arrow_function: tap_dance_arrow_function {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_ARROW_FUNCTION";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings =
+                <&kp SEMI>,
+                <&macro_arrow_function>;
+        };
+        td_brackets_open: tap_dance_brackets_open {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_BRACKETS_OPEN";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings =
+                <&kp LEFT_PARENTHESIS>,
+                <&kp LBKT>,
+                <&kp LEFT_BRACE>;
+        };
+        td_brackets_close: tap_dance_brackets_close {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_BRACKETS_CLOSE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings =
+                <&kp RIGHT_PARENTHESIS>,
+                <&kp RBKT>,
+                <&kp RIGHT_BRACE>;
+        };
+    };
+};

@@ -13,39 +13,13 @@
 // #include "./macros.dtsi"
 // #include "./behaviors.dtsi"
 
-&spi1 {
+&nice_view_spi {
     compatible = "nordic,nrf-spim";
-    status = "okay";
-    mosi-pin = <6>;
-
-    // Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
-
-    sck-pin = <5>;
-    miso-pin = <7>;
-
-    led_strip: ws2812@0 {
-        compatible = "worldsemi,ws2812-spi";
-        label = "WS2812";
-
-        /* SPI */
-
-        reg = <0>;/* ignored, but necessary for SPI bindings */
-        spi-max-frequency = <4000000>;
-
-        /* WS2812 */
-
-        chain-length = <27>;/* arbitrary; change at will */
-        spi-one-frame = <0x70>;
-        spi-zero-frame = <0x40>;
-        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+    sck-pin = <20>;
+    mosi-pin = <17>;
+    miso-pin = <25>;
+    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
     };
-};
-
-/ {
-    chosen {
-        zmk,underglow = &led_strip;
-    };
-};
 
 / {
     macros {

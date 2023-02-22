@@ -229,10 +229,10 @@
 
         Config {
             bindings = <
-         &trans            &none            &none            &none            &none       &kp LC(LEFT)       &kp RC(RIGHT)   &none  &kp F12           &kp C_VOL_DN  &kp C_VOL_UP  &trans
-&rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &td_brackets_open  &td_brackets_close   &none    &none                  &none         &none   &none
-&rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD              &none               &none   &none    &none  &macro_arrow_function         &none  &trans
-                                                            &trans           &trans             &trans              &trans  &trans   &trans
+&trans    &none    &none    &none    &none   &kp LC(LEFT)           &kp RC(RIGHT)         &none    &kp F12    &kp C_VOL_DN  &kp C_VOL_UP  &trans
+&trans    &none    &none    &none    &none   &td_brackets_open      &td_brackets_close    &none    &none      &none         &none         &none
+&trans    &none    &none    &none    &none   &none                   &none   &none    &none  &macro_arrow_function         &none  &trans
+                            &trans   &trans   &trans                 &trans  &trans   &trans
             >;
         };
 
@@ -248,8 +248,8 @@
         ConfigRight {
             bindings = <
 &trans  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none  &trans
-&trans  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none   &none
-&trans  &none  &none   &none   &none   &none   &none   &none   &none  &none  &none   &none
+&rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD   &none   &none   &none   &none  &none  &none   &none
+&rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD   &none   &none   &none   &none  &none  &none   &none
                       &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };

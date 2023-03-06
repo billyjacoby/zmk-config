@@ -19,7 +19,7 @@
     mosi-pin = <17>;
     miso-pin = <25>;
     cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
-    };
+};
 
 / {
     macros {
@@ -150,6 +150,21 @@
             bindings = <&macro_cmd_space>;
             key-positions = <53 42>;
             layers = <0 3 1 2>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
+
+        shift {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <12 13>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <24 25>;
         };
     };
 

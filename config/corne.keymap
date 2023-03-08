@@ -86,23 +86,23 @@
             label = "arrow_functions";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp LEFT_PARENTHESIS>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp RIGHT_PARENTHESIS>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp SPACE>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp EQUAL>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp GREATER_THAN>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp SPACE>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp LEFT_BRACE>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp RIGHT_BRACE>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp LEFT>;
         };
     };

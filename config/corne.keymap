@@ -81,6 +81,30 @@
                 <&macro_release>,
                 <&kp LEFT_CONTROL &kp LEFT_COMMAND>;
         };
+        arrow_functions: arrow_functions {
+            compatible = "zmk,behavior-macro";
+            label = "arrow_functions";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_PARENTHESIS>,
+                <&macro_press>,
+                <&kp RIGHT_PARENTHESIS>,
+                <&macro_press>,
+                <&kp SPACE>,
+                <&macro_press>,
+                <&kp EQUAL>,
+                <&macro_press>,
+                <&kp GREATER_THAN>,
+                <&macro_press>,
+                <&kp SPACE>,
+                <&macro_press>,
+                <&kp LEFT_BRACE>,
+                <&macro_press>,
+                <&kp RIGHT_BRACE>,
+                <&macro_press>,
+                <&kp LEFT>;
+        };
     };
 
     behaviors {
@@ -131,6 +155,14 @@
                 <&kp RIGHT_PARENTHESIS>,
                 <&kp RBKT>,
                 <&kp RIGHT_BRACE>;
+        };
+        arrow_func_full: new-behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_arrow_function>,
+                <&arrow_functions>;
         };
     };
 
@@ -236,9 +268,9 @@
 
         RaiseLower {
             bindings = <
-&trans  &none  &none   &none   &none       &kp LC(LEFT)       &kp RC(RIGHT)   &none  &kp F12           &kp C_VOL_DN  &kp C_VOL_UP  &trans
-&trans  &none  &none   &none   &none  &td_brackets_open  &td_brackets_close   &none    &none                  &none         &none   &none
-&trans  &none  &none   &none   &none              &none               &none   &none    &none  &macro_arrow_function         &none  &trans
+&trans  &none  &none   &none   &none       &kp LC(LEFT)       &kp RC(RIGHT)   &none  &kp F12      &kp C_VOL_DN  &kp C_VOL_UP  &trans
+&trans  &none  &none   &none   &none  &td_brackets_open  &td_brackets_close   &none    &none             &none         &none   &none
+&trans  &none  &none   &none   &none              &none               &none   &none    &none  &arrow_func_full         &none  &trans
                       &trans  &trans             &trans              &trans  &trans   &trans
             >;
         };

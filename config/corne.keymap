@@ -163,6 +163,8 @@
             bindings =
                 <&macro_arrow_function>,
                 <&arrow_functions>;
+
+            tapping-term-ms = <400>;
         };
     };
 
@@ -244,7 +246,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-        &kp TAB  &kp N1  &kp N2  &kp N3  &kp N4         &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
+      &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N4         &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
          &trans   &none   &none   &none   &none          &none   &none   &none   &none   &none  &trans    &trans
 &rgb_ug RGB_TOG   &none   &none   &none   &none  &kp LG(SPACE)   &none   &none  &trans  &trans  &trans     &none
                                  &trans   &mo 4         &trans  &trans  &trans  &trans
@@ -259,10 +261,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp EQUAL        &kp EXCL           &kp AT  &kp HASH  &kp DLLR      &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY   &kp LPAR       &kp RPAR  &kp BSPC
-   &trans        &kp LBKT         &kp RBKT     &none     &none          &none      &none     &none           &kp UP      &none          &none     &none
-    &none  &kp LEFT_BRACE  &kp RIGHT_BRACE     &none     &none  &kp LG(SPACE)      &none  &kp LEFT         &kp DOWN  &kp RIGHT  &kp BACKSLASH     &none
-                                              &trans    &trans         &trans     &trans     &mo 5           &trans
+&kp EQUAL    &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0  &kp BSPC
+   &trans        &kp LBKT         &kp RBKT         &none         &none          &none         &none         &none        &kp UP         &none          &none     &none
+    &none  &kp LEFT_BRACE  &kp RIGHT_BRACE         &none         &none  &kp LG(SPACE)         &none      &kp LEFT      &kp DOWN     &kp RIGHT  &kp BACKSLASH     &none
+                                                  &trans        &trans         &trans        &trans         &mo 5        &trans
             >;
         };
 

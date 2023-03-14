@@ -218,6 +218,16 @@
             bindings = <&kp MINUS>;
             key-positions = <34 33>;
         };
+
+        hr_tab {
+            bindings = <&kp TAB>;
+            key-positions = <17 16>;
+        };
+
+        hr_bkspc {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <18 19>;
+        };
     };
 
     keymap {

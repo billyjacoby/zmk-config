@@ -288,10 +288,10 @@
 
         RaiseLower {
             bindings = <
-&kp PLUS  &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR        &kp PERCENT            &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-  &trans     &none   &none      &none       &none  &td_brackets_open   &td_brackets_close          &none       &kp F12          &kp C_VOL_DN        &kp C_VOLUME_UP   &none
-  &trans     &none   &none      &none       &none       &kp LC(LEFT)  &kp RC(RIGHT_ARROW)          &none         &none      &arrow_func_full                  &none  &trans
-                               &trans      &trans             &trans               &trans         &trans        &trans
+  &kp PLUS  &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR        &kp PERCENT            &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LA(BACKSPACE)
+&caps_word     &none   &none      &none       &none  &td_brackets_open   &td_brackets_close          &none       &kp F12          &kp C_VOL_DN        &kp C_VOLUME_UP          &kp GRAVE
+    &trans     &none   &none      &none       &none       &kp LC(LEFT)  &kp RC(RIGHT_ARROW)          &none         &none      &arrow_func_full               &kp PIPE             &trans
+                                 &trans      &trans             &trans               &trans         &trans        &trans
             >;
         };
 

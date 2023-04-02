@@ -137,7 +137,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             global-quick-tap;
-            bindings = <&kp &kp>;
+            bindings = <&macro &kp>;
         };
         td_ctrl_opt: tap_dance_control_option {
             compatible = "zmk,behavior-tap-dance";

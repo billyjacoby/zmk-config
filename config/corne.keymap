@@ -23,6 +23,27 @@
 
 / {
     macros {
+
+        macro_layer1_pause_release: macro_layer1_pause_release {
+            compatible = "zmk,behavior-macro";
+            label = "macro_cmd_space";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &mo 1>,
+                <&macro_pause_for_release>,
+                <&macro_release &mo 1>,
+                <&macro_tap &to 0>;
+        };
+        macro_layer2_pause_release: macro_layer2_pause_release {
+            compatible = "zmk,behavior-macro";
+            label = "macro_cmd_space";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &mo 2>,
+                <&macro_pause_for_release>,
+                <&macro_release &mo 2>,
+                <&macro_tap &to 0>;
+        };
         macro_cmd_space: macro_cmd_space {
             compatible = "zmk,behavior-macro";
             label = "macro_cmd_space";

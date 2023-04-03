@@ -310,10 +310,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-      &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N4         &kp N5  &kp N6  &kp N7  &kp N8  &kp N9         &kp N0  &kp BSPC
-         &trans   &none   &none   &none   &none          &none   &none   &none   &none   &none         &trans    &trans
-&rgb_ug RGB_TOG   &none   &none   &none   &none  &kp LG(SPACE)   &none   &none  &trans  &trans  &kp BACKSLASH     &none
-                                 &trans   &mo 4         &trans  &trans  &trans  &trans
+      &kp EQUAL     &kp N1     &kp N2     &kp N3     &kp N4         &kp N5  &kp N6  &kp N7  &kp N8  &kp N9         &kp N0  &kp BSPC
+         &trans      &none  &kp LG(S)      &none      &none          &none   &none   &none   &none   &none         &trans    &trans
+&rgb_ug RGB_TOG  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(SPACE)   &none   &none  &trans  &trans  &kp BACKSLASH     &none
+                                          &trans      &mo 4         &trans  &trans  &trans  &trans
             >;
 
             label = "raise";

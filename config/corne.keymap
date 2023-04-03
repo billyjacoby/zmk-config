@@ -293,10 +293,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-       &kp ESC  &kp Q  &kp W     &kp E         &kp R        &kp T        &kp Y      &kp U             &kp I    &kp O     &kp P          &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S     &kp D         &kp F        &kp G        &kp H      &kp J             &kp K    &kp L  &kp SEMI  &kp SINGLE_QUOTE
-       &kp TAB  &kp Z  &kp X     &kp C         &kp V        &kp B        &kp N      &kp M         &kp COMMA  &kp DOT  &kp FSLH         &kp MINUS
-                              &kp LALT  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 ENTER  &kp GRAVE  &kp LEFT_CONTROL
+       &kp ESC  &kp Q  &kp W        &kp E         &kp R        &kp T        &kp Y      &kp U             &kp I    &kp O     &kp P          &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S        &kp D         &kp F        &kp G        &kp H      &kp J             &kp K    &kp L  &kp SEMI  &kp SINGLE_QUOTE
+       &kp TAB  &kp Z  &kp X        &kp C         &kp V        &kp B        &kp N      &kp M         &kp COMMA  &kp DOT  &kp FSLH         &kp MINUS
+                              &td_opt_tog  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 ENTER  &kp GRAVE  &kp LEFT_CONTROL
             >;
 
             label = "main";
@@ -310,10 +310,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-      &kp EQUAL  &kp N1  &kp N2       &kp N3  &kp N4         &kp N5  &kp N6  &kp N7  &kp N8  &kp N9         &kp N0  &kp BSPC
-         &trans   &none   &none        &none   &none          &none   &none   &none   &none   &none         &trans    &trans
-&rgb_ug RGB_TOG   &none   &none        &none   &none  &kp LG(SPACE)   &none   &none  &trans  &trans  &kp BACKSLASH     &none
-                                 &td_opt_tog  &tog 4         &trans  &trans  &trans  &trans
+      &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N4         &kp N5  &kp N6  &kp N7  &kp N8  &kp N9         &kp N0  &kp BSPC
+         &trans   &none   &none   &none   &none          &none   &none   &none   &none   &none         &trans    &trans
+&rgb_ug RGB_TOG   &none   &none   &none   &none  &kp LG(SPACE)   &none   &none  &trans  &trans  &kp BACKSLASH     &none
+                                 &trans   &mo 4         &trans  &trans  &trans  &trans
             >;
 
             label = "raise";
@@ -327,10 +327,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp EQUAL       &kp NUMBER_1        &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0  &kp BSPC
-   &trans           &kp LBKT            &kp RBKT         &none         &none          &none         &none         &none        &kp UP         &none          &none     &none
-    &none  &td_brackets_open  &td_brackets_close         &none         &none  &kp LG(SPACE)         &none      &kp LEFT      &kp DOWN     &kp RIGHT  &kp BACKSLASH     &none
-                                                        &trans        &trans         &trans        &trans        &tog 5        &trans
+&kp EQUAL       &kp NUMBER_1        &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0  &kp BSPC
+   &trans           &kp LBKT            &kp RBKT         &none         &none          &none    &kp PAGE_UP         &none        &kp UP         &none          &none     &none
+    &none  &td_brackets_open  &td_brackets_close         &none         &none  &kp LG(SPACE)  &kp PAGE_DOWN      &kp LEFT      &kp DOWN     &kp RIGHT  &kp BACKSLASH     &none
+                                                        &trans        &trans         &trans         &trans         &mo 5        &trans
             >;
 
             label = "lower";

@@ -321,9 +321,9 @@ nice_view_spi: &spi0 {
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-       &kp ESC  &kp Q  &kp W         &kp E         &kp R        &kp T        &kp Y      &kp U             &kp I    &kp O     &kp P         &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S         &kp D         &kp F        &kp G        &kp H      &kp J             &kp K    &kp L  &kp SEMI  &td_quote_grave
-       &kp TAB  &kp Z  &kp X         &kp C         &kp V        &kp B        &kp N      &kp M         &kp COMMA  &kp DOT  &kp FSLH        &kp MINUS
+&kp ESC         &kp Q  &kp W  &kp E         &kp R         &kp T        &kp Y        &kp U      &kp I             &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F         &kp G        &kp H        &kp J      &kp K             &kp L    &kp SEMI  &td_quote_grave
+&kp TAB         &kp Z  &kp X  &kp C         &kp V         &kp B        &kp N        &kp M      &kp COMMA         &kp DOT  &kp FSLH  &kp MINUS
                               &kp LEFT_ALT  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 ENTER  &kp GRAVE  &kp LEFT_CONTROL
             >;
 
@@ -338,10 +338,10 @@ nice_view_spi: &spi0 {
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-      &kp EQUAL     &kp N1     &kp N2     &kp N3     &kp N4             &kp N5              &kp N6  &kp N7  &kp N8  &kp N9         &kp N0  &kp BSPC
-         &trans      &none  &kp LG(S)      &none      &none  &td_brackets_open  &td_brackets_close   &none   &none   &none         &trans    &trans
-&rgb_ug RGB_TOG  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)      &kp LG(SPACE)               &none   &none  &trans  &trans  &kp BACKSLASH     &none
-                                          &trans      &mo 4             &trans              &trans  &trans  &trans
+&kp EQUAL        &kp N1     &kp N2     &kp N3     &kp N4     &kp N5             &kp N6              &kp N7  &kp N8  &kp N9  &kp N0         &kp BSPC
+&trans           &none      &kp LG(S)  &none      &none      &td_brackets_open  &td_brackets_close  &none   &none   &none   &trans         &trans
+&rgb_ug RGB_TOG  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(SPACE)      &none               &none   &trans  &trans  &kp BACKSLASH  &none
+                                       &trans     &mo 4      &trans             &trans              &trans  &trans
             >;
 
             label = "raise";
@@ -355,10 +355,10 @@ nice_view_spi: &spi0 {
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp EQUAL       &kp NUMBER_1        &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4       &kp NUMBER_5        &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0       &kp BSPC
-   &trans           &kp LBKT            &kp RBKT         &none         &none  &td_brackets_open  &td_brackets_close         &none        &kp UP         &none          &none    &kp PAGE_UP
-    &none  &td_brackets_open  &td_brackets_close         &none         &none      &kp LG(SPACE)               &none      &kp LEFT      &kp DOWN     &kp RIGHT  &kp BACKSLASH  &kp PAGE_DOWN
-                                                        &trans        &trans             &trans              &trans         &mo 5        &trans
+&kp EQUAL  &kp NUMBER_1       &kp NUMBER_2        &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5       &kp NUMBER_6        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp BSPC
+&trans     &kp LBKT           &kp RBKT            &none         &none         &td_brackets_open  &td_brackets_close  &none         &kp UP        &none         &none          &kp PAGE_UP
+&none      &td_brackets_open  &td_brackets_close  &none         &none         &kp LG(SPACE)      &none               &kp LEFT      &kp DOWN      &kp RIGHT     &kp BACKSLASH  &kp PAGE_DOWN
+                                                  &trans        &trans        &trans             &trans              &mo 5         &trans
             >;
 
             label = "lower";
@@ -366,10 +366,10 @@ nice_view_spi: &spi0 {
 
         RaiseLower {
             bindings = <
-  &kp PLUS  &kp EXCL  &kp AT  &kp POUND    &kp DOLLAR        &kp PERCENT            &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LA(BACKSPACE)
-&caps_word     &none   &none      &none         &none  &td_brackets_open   &td_brackets_close             &none       &kp F12          &kp C_VOL_DN        &kp C_VOLUME_UP          &kp GRAVE
-    &trans     &none   &none      &none  &kp LC(DOWN)       &kp LC(LEFT)  &kp RC(RIGHT_ARROW)  &kp LC(UP_ARROW)         &none      &arrow_func_full               &kp PIPE             &trans
-                                 &trans        &trans             &trans               &trans            &trans        &trans
+&kp PLUS    &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR    &kp PERCENT        &kp CARET            &kp AMPERSAND     &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LA(BACKSPACE)
+&caps_word  &none     &none   &none      &none         &td_brackets_open  &td_brackets_close   &kp F2            &kp F12       &kp C_VOL_DN          &kp C_VOLUME_UP        &kp GRAVE
+&trans      &none     &none   &none      &kp LC(DOWN)  &kp LC(LEFT)       &kp RC(RIGHT_ARROW)  &kp LC(UP_ARROW)  &none         &arrow_func_full      &kp PIPE               &trans
+                              &trans     &trans        &trans             &trans               &trans            &trans
             >;
 
             label = "raiseLower";
@@ -377,10 +377,10 @@ nice_view_spi: &spi0 {
 
         Navigation {
             bindings = <
-&trans         &none         &none         &none         &none       &none   &none         &none         &none          &none  &none  &trans
- &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 2  &bt BT_CLR   &none         &none    &kp LA(UP)          &none  &none   &none
- &none         &none         &none         &none         &none       &none   &none  &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(RIGHT)  &none   &none
-                                          &trans        &trans      &trans  &trans        &trans        &trans
+&trans  &none         &none         &none         &none         &none       &none   &none         &none         &none          &none  &trans
+&none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 2  &bt BT_CLR  &none   &none         &kp LA(UP)    &none          &none  &none
+&none   &none         &none         &none         &none         &none       &none   &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(RIGHT)  &none  &none
+                                    &trans        &trans        &trans      &trans  &trans        &trans
             >;
 
             label = "nav";
@@ -388,10 +388,10 @@ nice_view_spi: &spi0 {
 
         ConfigRight {
             bindings = <
-         &trans            &none            &none            &none            &none   &none   &none   &none   &none  &none  &none  &trans
-&rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD   &none   &none   &none   &none  &none  &none   &none
-&rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD   &none   &none   &none   &none  &none  &none   &none
-                                                            &trans           &trans  &trans  &trans  &trans  &trans
+&trans           &none            &none            &none            &none            &none   &none   &none   &none   &none  &none  &trans
+&rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &none   &none   &none   &none   &none  &none  &none
+&rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none   &none   &none   &none   &none  &none  &none
+                                                   &trans           &trans           &trans  &trans  &trans  &trans
             >;
         };
     };

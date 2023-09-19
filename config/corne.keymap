@@ -227,8 +227,11 @@ nice_view_spi: &spi0 {
             label = "TD_QUOTE_GRAVE";
             #binding-cells = <0>;
             bindings =
-                <&kp SINGLE_QUOTE>,
-                <&kp GRAVE>;
+                <&kp DOUBLE_QUOTES>,
+                <&kp GRAVE>,
+                <&kp SINGLE_QUOTE>;
+
+            tapping-term-ms = <150>;
         };
         td_ctrl_tog: td_ctrl_tog {
             compatible = "zmk,behavior-tap-dance";

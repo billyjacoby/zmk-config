@@ -227,9 +227,9 @@ nice_view_spi: &spi0 {
             label = "TD_QUOTE_GRAVE";
             #binding-cells = <0>;
             bindings =
+                <&kp SINGLE_QUOTE>,
                 <&kp DOUBLE_QUOTES>,
-                <&kp GRAVE>,
-                <&kp SINGLE_QUOTE>;
+                <&kp GRAVE>;
 
             tapping-term-ms = <150>;
         };

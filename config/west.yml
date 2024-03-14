@@ -1,11 +1,11 @@
 manifest:
   remotes:
-    - name: billyjacoby
-      url-base: https://github.com/billyjacoby
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
-      remote: billyjacoby
-      revision: nicell-widgets
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config

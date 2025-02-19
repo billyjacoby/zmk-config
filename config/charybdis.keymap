@@ -187,9 +187,9 @@
             bindings = <&kp RIGHT_BRACE>, <&kp RBKT>, <&kp RIGHT_PARENTHESIS>;
         };
 
-        arrow_func_full: new-behavior {
+        arrow_func_full: arrow_func_full {
             compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
+            label = "ARROW_FUNC_FULL";
             #binding-cells = <0>;
             bindings = <&macro_arrow_function>, <&arrow_functions>;
 
@@ -326,7 +326,7 @@
             bindings = <
 &kp EQUAL        &kp N1     &kp N2     &kp N3     &kp N4     &kp N5             &kp N6              &kp N7  &kp N8  &kp N9  &kp N0         &kp BSPC
 &trans           &none      &kp LG(S)  &none      &none      &td_brackets_open  &td_brackets_close  &none   &none   &none   &trans         &trans
-&rgb_ug RGB_TOG  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(SPACE)      &none               &none   &trans  &trans  &kp BACKSLASH  &none
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(SPACE)      &none               &none   &trans  &trans  &kp BACKSLASH  &none
                                        &trans     &mo 4      &trans             &trans              &trans  &trans
             >;
 
@@ -375,8 +375,8 @@
         ConfigRight {
             bindings = <
 &trans           &none            &none            &none            &none            &none   &none   &none   &none   &none  &none  &trans
-&rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &none   &none   &none   &none   &none  &none  &none
-&rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none   &none   &none   &none   &none  &none  &none
+&trans  &trans   &trans   &trans   &trans   &none   &none   &none   &none   &none  &none  &none
+&trans   &trans   &trans   &trans   &trans   &none   &none   &none   &none   &none  &none  &none
                                                    &trans           &trans           &trans  &trans  &trans  &trans
             >;
         };

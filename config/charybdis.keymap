@@ -1,19 +1,16 @@
-#include <behaviors.dtsi>
 #include <dt-bindings/zmk/mouse.h>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT 0
 #define NUMBER  1
 #define FN  2
 #define HOTKEY  3
 
-
-
 / {
-    
-
     macros {
         macro_layer1_pause_release: macro_layer1_pause_release {
             compatible = "zmk,behavior-macro";
@@ -132,7 +129,7 @@
         };
     };
 
-        behaviors {
+    behaviors {
         ht_tp_l1: hold_tap_layer_1 {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_LAYER_1";
@@ -254,7 +251,7 @@
         };
     };
 
-        conditional_layers {
+    conditional_layers {
         compatible = "zmk,conditional-layers";
 
         tri_layer {
@@ -263,7 +260,7 @@
         };
     };
 
-        combos {
+    combos {
         compatible = "zmk,combos";
 
         raycast {
@@ -327,10 +324,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC                       &kp Q  &kp W  &kp E         &kp R         &kp T        &kp Y        &kp U      &kp I             &kp O    &kp P     &kp BSPC
-&kp LEFT_SHIFT                &kp A  &kp S  &kp D         &kp F         &kp G        &kp H        &kp J      &kp K             &kp L    &kp SEMI  &td_quote_grave
-&mt LS(LA(LC(LEFT_GUI))) TAB  &kp Z  &kp X  &kp C         &kp V         &kp B        &kp N        &kp M      &kp COMMA         &kp DOT  &kp FSLH  &kp MINUS
-                                            &mouse_cmd_tap LEFT_ALT LCLK  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 ENTER  &kp GRAVE  &kp LEFT_CONTROL
+&kp ESC                       &kp Q  &kp W  &kp E      &kp R         &kp T        &kp Y        &kp U           &kp I             &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT                &kp A  &kp S  &kp D      &kp F         &kp G        &kp H        &kp J           &kp K             &kp L    &kp SEMI  &td_quote_grave
+&mt LS(LA(LC(LEFT_GUI))) TAB  &kp Z  &kp X  &kp C      &kp V         &kp B        &kp N        &kp M           &kp COMMA         &kp DOT  &kp FSLH  &kp MINUS
+                                            &mkp LCLK  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 ENTER  &mt GRAVE LALT  &kp LEFT_CONTROL
             >;
 
             label = "main";
@@ -344,10 +341,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp EQUAL        &kp N1     &kp N2     &kp N3     &kp N4     &kp N5             &kp N6              &kp N7  &kp N8  &kp N9  &kp N0         &kp BSPC
-&trans           &none      &kp LG(S)  &none      &none      &td_brackets_open  &td_brackets_close  &none   &none   &none   &trans         &trans
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(SPACE)      &none               &none   &trans  &trans  &kp BACKSLASH  &none
-                                       &trans     &mo 4      &trans             &trans              &trans  &trans
+&kp EQUAL  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5             &kp N6              &kp N7  &kp N8  &kp N9  &kp N0         &kp BSPC
+&trans     &none      &kp LG(S)  &none      &none      &td_brackets_open  &td_brackets_close  &none   &none   &none   &trans         &kp GRAVE
+&trans     &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(SPACE)      &none               &none   &trans  &trans  &kp BACKSLASH  &none
+                                 &trans     &mo 4      &trans             &trans              &trans  &trans
             >;
 
             label = "raise";
@@ -394,10 +391,10 @@
 
         ConfigRight {
             bindings = <
-&trans           &none            &none            &none            &none            &none   &none   &none   &none   &none  &none  &trans
-&trans  &trans   &trans   &trans   &trans   &none   &none   &none   &none   &none  &none  &none
-&trans   &trans   &trans   &trans   &trans   &none   &none   &none   &none   &none  &none  &none
-                                                   &trans           &trans           &trans  &trans  &trans  &trans
+&trans  &none   &none   &none   &none   &none   &none   &none   &none   &none  &none  &trans
+&trans  &trans  &trans  &trans  &trans  &none   &none   &none   &none   &none  &none  &none
+&trans  &trans  &trans  &trans  &trans  &none   &none   &none   &none   &none  &none  &none
+                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };

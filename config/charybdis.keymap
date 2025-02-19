@@ -240,7 +240,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
-            bindings = <&kp &mkp LCLK>;
+            bindings = <&kp>, <&mkp>;
         };
 
         mouse_cmd_tap_r: mouse_cmd_tap_r {
@@ -250,7 +250,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
-            bindings = <&kp &mkp RCLK>;
+            bindings = <&kp>, <&mkp>;
         };
     };
 
@@ -330,7 +330,7 @@
 &kp ESC                       &kp Q  &kp W  &kp E         &kp R         &kp T        &kp Y        &kp U      &kp I             &kp O    &kp P     &kp BSPC
 &kp LEFT_SHIFT                &kp A  &kp S  &kp D         &kp F         &kp G        &kp H        &kp J      &kp K             &kp L    &kp SEMI  &td_quote_grave
 &mt LS(LA(LC(LEFT_GUI))) TAB  &kp Z  &kp X  &kp C         &kp V         &kp B        &kp N        &kp M      &kp COMMA         &kp DOT  &kp FSLH  &kp MINUS
-                                            &mouse_cmd_tap LEFT_ALT 0  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 ENTER  &kp GRAVE  &kp LEFT_CONTROL
+                                            &mouse_cmd_tap LEFT_ALT LCLK  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 ENTER  &kp GRAVE  &kp LEFT_CONTROL
             >;
 
             label = "main";

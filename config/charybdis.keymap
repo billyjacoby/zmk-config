@@ -240,7 +240,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
-            bindings = <&kp>, <&mkp LCLK>;
+            bindings = <&kp &mkp LCLK>;
         };
 
         mouse_cmd_tap_r: mouse_cmd_tap_r {
@@ -250,7 +250,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
-            bindings = <&kp>, <&mkp RCLK>;
+            bindings = <&kp &mkp RCLK>;
         };
     };
 

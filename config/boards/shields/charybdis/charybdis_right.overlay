@@ -58,7 +58,6 @@
         scroll-layers = <1>;
         // snipe-layers = <>;
         automouse-layer = <5>;
-        evt-type = "pointer";
     };
 };
 

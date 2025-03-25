@@ -1,8 +1,8 @@
-#include <behaviors.dtsi>
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <behaviors.dtsi>
 
 #define DEFAULT 0
 #define NUMBER  1
@@ -309,6 +309,12 @@
         hr_bkspc {
             bindings = <&kp BACKSPACE>;
             key-positions = <19 20>;
+        };
+
+        hr_lcick {
+            bindings = <&mkp LCLK>;
+            key-positions = <26 27>;
+            layers = <3 2 1 0 4 5>;
         };
     };
 

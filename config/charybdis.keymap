@@ -311,9 +311,15 @@
             key-positions = <19 20>;
         };
 
-        hr_lcick {
+        fg_lclick {
             bindings = <&mkp LCLK>;
             key-positions = <16 17>;
+            layers = <3 2 1 0 4 5>;
+        };
+
+        hj_lclick {
+            bindings = <&mkp LCLK>;
+            key-positions = <19 18>;
             layers = <3 2 1 0 4 5>;
         };
     };

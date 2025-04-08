@@ -317,9 +317,15 @@
             layers = <3 2 1 0 4 5>;
         };
 
-        hj_lclick {
+        yu_lclick {
             bindings = <&mkp LCLK>;
-            key-positions = <19 18>;
+            key-positions = <6 7>;
+            layers = <3 2 1 0 4 5>;
+        };
+
+        ui_rclick {
+            bindings = <&mkp RCLK>;
+            key-positions = <7 8>;
             layers = <3 2 1 0 4 5>;
         };
     };
@@ -402,9 +408,9 @@
 
         AutoMouse {
             bindings = <
-&trans  &trans   &trans   &trans   &trans   &trans   &mkp LCLK  &mkp RCLK  &mkp MB3  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &mkp MB4   &mkp MB5   &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans      &trans      &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MB3  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4   &mkp MB5   &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans
                         &trans  &trans  &trans  &trans     &trans     &trans
             >;
         };

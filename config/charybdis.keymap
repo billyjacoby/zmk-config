@@ -306,26 +306,21 @@
             key-positions = <16 15>;
         };
 
-        hr_bkspc {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <19 20>;
-        };
-
         fg_lclick {
             bindings = <&mkp LCLK>;
             key-positions = <16 17>;
             layers = <3 2 1 0 4 5>;
         };
 
-        yu_lclick {
+        hj_lclick {
             bindings = <&mkp LCLK>;
-            key-positions = <6 7>;
+            key-positions = <18 19>;
             layers = <3 2 1 0 4 5>;
         };
 
-        ui_rclick {
+        jk_rclick {
             bindings = <&mkp RCLK>;
-            key-positions = <7 8>;
+            key-positions = <19 20>;
             layers = <3 2 1 0 4 5>;
         };
 

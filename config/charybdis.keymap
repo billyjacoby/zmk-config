@@ -328,6 +328,18 @@
             key-positions = <7 8>;
             layers = <3 2 1 0 4 5>;
         };
+
+        mouse_back {
+            bindings = <&mkp MB4>;
+            key-positions = <30 31>;
+            layers = <3 2 1 0 4 5>;
+        };
+
+        mouse_forward {
+            bindings = <&mkp MB5>;
+            key-positions = <31 32>;
+            layers = <3 2 1 0 4 5>;
+        };
     };
 
     keymap {
@@ -409,7 +421,7 @@
         AutoMouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MB3  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4   &mkp MB5   &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans
                         &trans  &trans  &trans  &trans     &trans     &trans
             >;

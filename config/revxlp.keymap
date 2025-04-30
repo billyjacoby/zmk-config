@@ -5,10 +5,10 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     macros {
@@ -184,9 +184,9 @@
             bindings = <&kp RIGHT_BRACE>, <&kp RBKT>, <&kp RIGHT_PARENTHESIS>;
         };
 
-        arrow_func_full: new-behavior {
+        arrow_func_full: arrow_func_full {
             compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
+            label = "ARROW_FUNC_FULL";
             #binding-cells = <0>;
             bindings = <&macro_arrow_function>, <&arrow_functions>;
 
@@ -228,6 +228,26 @@
             label = "TD_CMD_TOG";
             #binding-cells = <0>;
             bindings = <&kp LGUI>, <&kt LGUI>;
+        };
+
+        mouse_cmd_tap: mouse_cmd_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOUSE_CMD_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            bindings = <&kp>, <&mkp>;
+        };
+
+        mouse_cmd_tap_r: mouse_cmd_tap_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOUSE_CMD_TAP_R";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            bindings = <&kp>, <&mkp>;
         };
     };
 
@@ -287,9 +307,34 @@
             key-positions = <16 15>;
         };
 
-        hr_bkspc {
-            bindings = <&kp BACKSPACE>;
+        fg_lclick {
+            bindings = <&mkp LCLK>;
+            key-positions = <16 17>;
+            layers = <3 2 1 0 4 5>;
+        };
+
+        hj_lclick {
+            bindings = <&mkp LCLK>;
+            key-positions = <18 19>;
+            layers = <3 2 1 0 4 5>;
+        };
+
+        jk_rclick {
+            bindings = <&mkp RCLK>;
             key-positions = <19 20>;
+            layers = <3 2 1 0 4 5>;
+        };
+
+        mouse_back {
+            bindings = <&mkp MB4>;
+            key-positions = <30 31>;
+            layers = <3 2 1 0 4 5>;
+        };
+
+        mouse_forward {
+            bindings = <&mkp MB5>;
+            key-positions = <31 32>;
+            layers = <3 2 1 0 4 5>;
         };
     };
 
@@ -304,10 +349,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC                       &kp Q  &kp W         &kp E         &kp R        &kp T        &kp Y      &kp U             &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_SHIFT                &kp A  &kp S         &kp D         &kp F        &kp G        &kp H      &kp J             &kp K      &kp L    &kp SEMI  &td_quote_grave
-&mt LS(LA(LC(LEFT_GUI))) TAB  &kp Z  &kp X         &kp C         &kp V        &kp B        &kp N      &kp M             &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
-                                     &kp LEFT_ALT  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 ENTER  &kp GRAVE  &kp LEFT_CONTROL
+&kp ESC                       &kp Q  &kp W  &kp E     &kp R         &kp T        &kp Y        &kp U           &kp I             &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT                &kp A  &kp S  &kp D     &kp F         &kp G        &lt 1 H      &lt 2 J         &kp K             &kp L    &kp SEMI  &td_quote_grave
+&mt LS(LA(LC(LEFT_GUI))) TAB  &kp Z  &kp X  &kp C     &kp V         &kp B        &kp N        &kp M           &kp COMMA         &kp DOT  &kp FSLH  &kp MINUS
+                                            &kp LALT  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 ENTER  &mt LALT GRAVE  &kp LEFT_CONTROL
             >;
 
             label = "main";
@@ -322,9 +367,9 @@
 
             bindings = <
 &kp EQUAL  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5             &kp N6              &kp N7  &kp N8  &kp N9  &kp N0         &kp BSPC
-&trans     &none      &kp LG(S)  &none      &none      &td_brackets_open  &td_brackets_close  &none   &none   &none   &trans         &trans
+&trans     &none      &kp LG(S)  &mkp RCLK  &mkp LCLK  &td_brackets_open  &td_brackets_close  &none   &none   &none   &trans         &kp GRAVE
 &trans     &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(SPACE)      &none               &none   &trans  &trans  &kp BACKSLASH  &none
-                      &trans     &mo 4      &trans     &trans             &trans              &trans
+                                 &trans     &mo 4      &trans             &trans              &trans  &trans
             >;
 
             label = "raise";
@@ -341,7 +386,7 @@
 &kp EQUAL  &kp NUMBER_1       &kp NUMBER_2        &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5       &kp NUMBER_6        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp BSPC
 &trans     &kp LBKT           &kp RBKT            &none         &none         &td_brackets_open  &td_brackets_close  &none         &kp UP        &none         &none          &kp PAGE_UP
 &none      &td_brackets_open  &td_brackets_close  &none         &none         &kp LG(SPACE)      &none               &kp LEFT      &kp DOWN      &kp RIGHT     &kp BACKSLASH  &kp PAGE_DOWN
-                              &trans              &trans        &trans        &trans             &mo 5               &trans
+                                                  &trans        &trans        &trans             &trans              &mo 5         &trans
             >;
 
             label = "lower";
@@ -349,10 +394,10 @@
 
         RaiseLower {
             bindings = <
-&kp PLUS    &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR    &kp PERCENT        &kp CARET            &kp AMPERSAND     &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LA(BACKSPACE)
-&caps_word  &none     &none   &none      &none         &td_brackets_open  &td_brackets_close   &kp F2            &kp F12       &kp C_VOL_DN          &kp C_VOLUME_UP        &kp GRAVE
-&trans      &none     &none   &none      &kp LC(DOWN)  &kp LC(LEFT)       &kp RC(RIGHT_ARROW)  &kp LC(UP_ARROW)  &none         &arrow_func_full      &kp PIPE               &trans
-                      &trans  &trans     &trans        &trans             &trans               &trans
+&kp PLUS    &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR    &kp PERCENT        &kp CARET           &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LA(BACKSPACE)
+&caps_word  &none     &none   &none      &none         &td_brackets_open  &td_brackets_close  &kp F2         &kp F12       &kp C_VOL_DN          &kp C_VOLUME_UP        &kp GRAVE
+&trans      &none     &none   &none      &kp LC(LEFT)  &kp LC(DOWN)       &kp RC(UP_ARROW)    &kp LC(RIGHT)  &none         &arrow_func_full      &kp PIPE               &trans
+                              &trans     &trans        &trans             &trans              &trans         &trans
             >;
 
             label = "raiseLower";
@@ -360,21 +405,21 @@
 
         Navigation {
             bindings = <
-&bt BT_CLR  &none         &none   &studio_unlock  &none       &none         &none   &none         &none         &none          &none  &trans
-&none       &bt BT_SEL 0  &trans  &bt BT_SEL 0    &bt BT_PRV  &bt BT_NXT    &none   &none         &kp LA(UP)    &none          &none  &none
-&none       &none         &none   &bl BL_ON       &bl BL_OFF  &bl BL_CYCLE  &none   &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(RIGHT)  &none  &none
-                          &trans  &trans          &trans      &trans        &trans  &trans
+&bt BT_CLR  &none         &none   &none   &none       &bootloader  &bootloader  &none         &none         &none          &none  &trans
+&none       &bt BT_SEL 0  &trans  &trans  &bt BT_PRV  &bt BT_NXT   &none        &none         &kp LA(UP)    &none          &none  &none
+&none       &none         &none   &none   &none       &none        &none        &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(RIGHT)  &none  &none
+                                  &trans  &trans      &trans       &trans       &trans        &trans
             >;
 
             label = "nav";
         };
 
-        ConfigRight {
+        AutoMouse {
             bindings = <
-&trans  &none   &none   &none   &none   &none   &none   &none   &none  &none  &none  &trans
-&trans  &trans  &trans  &trans  &trans  &none   &none   &none   &none  &none  &none  &none
-&trans  &trans  &trans  &trans  &trans  &none   &none   &none   &none  &none  &none  &none
-                &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MB3  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans     &trans     &trans
             >;
         };
     };

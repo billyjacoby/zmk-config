@@ -416,7 +416,7 @@
         AutoMouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MB3  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp F10    &trans     &trans    &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans  &trans  &trans
                         &trans  &trans  &trans  &trans     &trans     &trans
             >;

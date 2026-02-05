@@ -10,14 +10,11 @@
 #include <zephyr/input/input.h>
 #include <zephyr/logging/log.h>
 #include <zmk/input.h>
-#include <zmk/layers.h>
-#include <zmk/keymap.h>
 
 LOG_MODULE_REGISTER(layer_scroll, CONFIG_ZMK_LOG_LEVEL);
 
 struct layer_scroll_config {
-    uint8_t layers_count;
-    uint8_t layers[];
+    uint8_t layers[2];
 };
 
 struct layer_scroll_data {
@@ -25,7 +22,7 @@ struct layer_scroll_data {
 };
 
 static bool is_scroll_layer(uint8_t current_layer, const struct layer_scroll_config *config) {
-    for (int i = 0; i < config->layers_count; i++) {
+    for (int i = 0; i < 2; i++) {
         if (config->layers[i] == current_layer) {
             return true;
         }
@@ -39,17 +36,19 @@ static int layer_scroll_process(const struct device *dev, struct input_event *ev
     
     // Only process relative X/Y movement
     if (event->type != INPUT_EV_REL) {
-        return ZMK_INPUT_PROC_CONTINUE;
+        return 0;
     }
     
     if (event->code != INPUT_REL_X && event->code != INPUT_REL_Y) {
-        return ZMK_INPUT_PROC_CONTINUE;
+        return 0;
     }
     
     // Check if we're on a scroll layer
+    // Get highest active layer - simplified approach
+    extern uint8_t zmk_keymap_highest_layer_active(void);
     uint8_t current_layer = zmk_keymap_highest_layer_active();
     if (!is_scroll_layer(current_layer, config)) {
-        return ZMK_INPUT_PROC_CONTINUE;
+        return 0;
     }
     
     // Transform movement to scroll
@@ -63,7 +62,7 @@ static int layer_scroll_process(const struct device *dev, struct input_event *ev
         event->value = -event->value;
     }
     
-    return ZMK_INPUT_PROC_CONTINUE;
+    return 0;
 }
 
 static const struct zmk_input_processor_driver_api layer_scroll_driver_api = {
@@ -73,11 +72,8 @@ static const struct zmk_input_processor_driver_api layer_scroll_driver_api = {
 #define LAYER_SCROLL_INIT(n)                                                                      \
     static struct layer_scroll_data layer_scroll_data_##n = {};                                   \
                                                                                                   \
-    static const uint8_t layer_scroll_layers_##n[] = DT_PROP(n, layers);                          \
-                                                                                                  \
     static const struct layer_scroll_config layer_scroll_config_##n = {                           \
-        .layers_count = DT_PROP_LEN(n, layers),                                                   \
-        .layers = layer_scroll_layers_##n,                                                        \
+        .layers = {DT_PROP(n, layers)},                                                           \
     };                                                                                            \
                                                                                                   \
     DEVICE_DT_INST_DEFINE(n, NULL, NULL, &layer_scroll_data_##n, &layer_scroll_config_##n,         \

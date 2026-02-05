@@ -1,0 +1,13 @@
+description: |
+  Layer Scroll Input Processor
+  Transforms pointing device movement to scroll events when on specified layers.
+
+compatible: "zmk,input-processor-layer-scroll"
+
+include: input-processor.yaml
+
+properties:
+  layers:
+    type: array
+    required: true
+    description: Layer numbers that trigger scroll mode

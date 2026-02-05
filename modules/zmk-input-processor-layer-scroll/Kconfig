@@ -1,0 +1,7 @@
+if ZMK_INPUT_PROCESSOR_LAYER_SCROLL
+
+module = ZMK_INPUT_PROCESSOR_LAYER_SCROLL
+module-str = layer_scroll
+source "${ZEPHYR_BASE}/subsys/logging/Kconfig.template.log_config"
+
+endif

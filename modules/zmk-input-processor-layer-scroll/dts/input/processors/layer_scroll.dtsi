@@ -1,0 +1,7 @@
+/ {
+    zip_layer_scroll: zip_layer_scroll {
+        compatible = "zmk,input-processor-layer-scroll";
+        #input-processor-cells = <2>;
+        layers = <0 0>;  // placeholder, overridden in instance
+    };
+};

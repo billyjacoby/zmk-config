@@ -68,6 +68,19 @@
     };
 };
 
+/ {
+    // Scroll mode input processor for layers 1 and 2
+    trackball_scroll: trackball_scroll {
+        compatible = "zmk,input-processor-two-axis";
+        #input-processor-cells = <0>;
+        x-input-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_WHEEL>;
+        y-input-type = <INPUT_EV_REL>;
+        y-input-code = <INPUT_REL_HWHEEL>;
+        y-invert;
+    };
+};
+
 // Enable and configure the central trackball listener
 &trackball_central_listener {
     status = "okay";

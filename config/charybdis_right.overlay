@@ -45,7 +45,7 @@
     };
 };
 
-// Enable and configure the central trackball listener
+// Central trackball listener - defined in charybdis.dtsi, enabled here
 &trackball_central_listener {
     status = "okay";
     device = <&trackball_central>;

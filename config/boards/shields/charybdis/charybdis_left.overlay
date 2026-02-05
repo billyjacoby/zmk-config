@@ -21,8 +21,3 @@
         , <&pro_micro 4 (GPIO_ACTIVE_HIGH)> // COL5
     ;
 };
-
-// Enable the peripheral trackball listener
-&trackball_peripheral_listener {
-    status = "okay";
-};

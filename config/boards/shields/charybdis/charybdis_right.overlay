@@ -79,9 +79,17 @@
         y-input-code = <INPUT_REL_HWHEEL>;
         y-invert;
     };
+
+    // Scroll mode listener (switches to scroll on layers 1 & 2)
+    trackball_scroll_listener: trackball_scroll_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&trackball_central>;
+        input-processors = <&trackball_scroll>, <&zip_ble_report_rate_limit>;
+    };
 };
 
-// Enable and configure the central trackball listener
+// Enable the main trackball listener
 &trackball_central_listener {
     status = "okay";
     device = <&trackball_central>;

@@ -365,10 +365,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp EQUAL  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5             &kp N6              &kp N7           &kp N8           &kp N9            &kp N0         &kp BSPC
-&trans     &none      &kp LG(S)  &mkp RCLK  &mkp LCLK  &td_brackets_open  &td_brackets_close  &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP      &trans         &kp GRAVE
-&trans     &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(SPACE)      &none               &msc SCRL_RIGHT  &none            &trans            &kp BACKSLASH  &none
-                                 &trans     &mo 4      &trans             &trans              &trans           &trans
+&kp EQUAL  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5             &kp N6              &kp N7  &kp N8  &kp N9  &kp N0         &kp BSPC
+&trans     &none      &kp LG(S)  &mkp RCLK  &mkp LCLK  &td_brackets_open  &td_brackets_close  &none   &none   &none   &trans         &kp GRAVE
+&trans     &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(SPACE)      &none               &none   &trans  &trans  &kp BACKSLASH  &none
+                                 &trans     &mo 4      &trans             &trans              &trans  &trans
             >;
 
             label = "raise";
@@ -382,10 +382,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp EQUAL  &kp NUMBER_1       &kp NUMBER_2        &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5       &kp NUMBER_6        &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP      &msc SCRL_RIGHT  &kp BSPC
-&trans     &kp LBKT           &kp RBKT            &none         &none         &td_brackets_open  &td_brackets_close  &none            &kp UP           &none             &none            &kp PAGE_UP
-&none      &td_brackets_open  &td_brackets_close  &none         &none         &kp LG(SPACE)      &none               &kp LEFT         &kp DOWN         &kp RIGHT        &kp BACKSLASH    &kp PAGE_DOWN
-                                                  &trans        &trans        &trans             &trans              &mo 5           &trans
+&kp EQUAL  &kp NUMBER_1       &kp NUMBER_2        &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5       &kp NUMBER_6        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp BSPC
+&trans     &kp LBKT           &kp RBKT            &none         &none         &td_brackets_open  &td_brackets_close  &none         &kp UP        &none         &none          &kp PAGE_UP
+&none      &td_brackets_open  &td_brackets_close  &none         &none         &kp LG(SPACE)      &none               &kp LEFT      &kp DOWN      &kp RIGHT     &kp BACKSLASH  &kp PAGE_DOWN
+                                                  &trans        &trans        &trans             &trans              &mo 5         &trans
             >;
 
             label = "lower";

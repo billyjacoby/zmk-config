@@ -18,7 +18,7 @@ manifest:
     - name: zmk-report-rate-limit
       remote: efogdev
       revision: main
-    - name: zmk-input-processor-xyz
+    - name: zmk-input-behavior-listener
       remote: badjeff
       revision: main
   self:

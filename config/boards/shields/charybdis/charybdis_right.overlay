@@ -67,25 +67,8 @@
     };
 };
 
-/ {
-    // Trackball movement on default layer (layer 0)
-    trackball_move: trackball_move {
-        compatible = "zmk,input-behavior-listener";
-        device = <&trackball_central>;
-        layers = <0>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-    };
-
-    // Trackball scroll on layers 1 and 2 (Raise/Lower)
-    trackball_scroll: trackball_scroll {
-        compatible = "zmk,input-behavior-listener";
-        device = <&trackball_central>;
-        layers = <1 2>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_HWHEEL>;
-        y-input-code = <INPUT_REL_WHEEL>;
-        y-invert;
-    };
+// Enable the trackball listener
+&trackball_central_listener {
+    status = "okay";
+    device = <&trackball_central>;
 };

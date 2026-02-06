@@ -56,7 +56,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <750>;
+        cpi = <600>;
         swap-xy;
         invert-x;
         invert-y;
@@ -71,4 +71,28 @@
 &trackball_central_listener {
     status = "okay";
     device = <&trackball_central>;
+};
+
+/ {
+    // Trackball movement on default layer (layer 0)
+    trackball_move: trackball_move {
+        compatible = "zmk,input-behavior-listener";
+        device = <&trackball_central>;
+        layers = <0>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+    };
+
+    // Trackball scroll on layers 1 and 2 (Raise/Lower)
+    trackball_scroll: trackball_scroll {
+        compatible = "zmk,input-behavior-listener";
+        device = <&trackball_central>;
+        layers = <1 2>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_HWHEEL>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        y-invert;
+        scale-divisor = <10>;
+    };
 };

@@ -93,6 +93,6 @@
         x-input-code = <INPUT_REL_HWHEEL>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
-        scale-divisor = <6>;
+        scale-divisor = <10>;
     };
 };

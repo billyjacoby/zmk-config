@@ -341,6 +341,7 @@
         compatible = "zmk,keymap";
 
         Default {
+            display-name = "main";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -358,6 +359,7 @@
         };
 
         Raise {
+            display-name = "raise";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -375,6 +377,7 @@
         };
 
         Lower {
+            display-name = "lower";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -392,6 +395,7 @@
         };
 
         RaiseLower {
+            display-name = "raiseLower";
             bindings = <
 &kp PLUS    &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR    &kp PERCENT        &kp CARET           &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LA(BACKSPACE)
 &caps_word  &none     &none   &none      &none         &td_brackets_open  &td_brackets_close  &kp F2         &kp F12       &kp C_VOL_DN          &kp C_VOLUME_UP        &kp GRAVE
@@ -403,6 +407,7 @@
         };
 
         Navigation {
+            display-name = "nav";
             bindings = <
 &bt BT_CLR  &none         &none   &none   &none       &bootloader  &bootloader  &none         &none         &none          &none  &trans
 &none       &bt BT_SEL 0  &trans  &trans  &bt BT_PRV  &bt BT_NXT   &none        &none         &kp LA(UP)    &none          &none  &none
@@ -414,6 +419,7 @@
         };
 
         AutoMouse {
+            display-name = "autoMouse";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MB3  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp F10    &trans     &trans    &trans  &trans  &trans

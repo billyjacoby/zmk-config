@@ -1,0 +1,5 @@
+/*
+ * Default shield keymap delegates to the user config keymap.
+ */
+
+#include "../../../config/toucan.keymap"

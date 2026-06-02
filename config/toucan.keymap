@@ -341,7 +341,7 @@
         compatible = "zmk,keymap";
 
         Default {
-            display-name = "main";
+            display-name = "base";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -355,11 +355,11 @@
                                             &kp LALT  &kp LEFT_GUI  &lt 1 SPACE  &lt 2 ENTER  &mt LALT GRAVE  &kp LEFT_CONTROL
             >;
 
-            label = "main";
+            label = "base";
         };
 
         Raise {
-            display-name = "raise";
+            display-name = "high";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -373,11 +373,11 @@
                                  &trans     &mo 4      &trans             &trans              &trans  &trans
             >;
 
-            label = "raise";
+            label = "high";
         };
 
         Lower {
-            display-name = "lower";
+            display-name = "down";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -391,11 +391,11 @@
                                                   &trans        &trans        &trans             &trans              &mo 5         &trans
             >;
 
-            label = "lower";
+            label = "down";
         };
 
         RaiseLower {
-            display-name = "raiseLower";
+            display-name = "func";
             bindings = <
 &kp PLUS    &kp EXCL  &kp AT  &kp POUND  &kp DOLLAR    &kp PERCENT        &kp CARET           &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LA(BACKSPACE)
 &caps_word  &none     &none   &none      &none         &td_brackets_open  &td_brackets_close  &kp F2         &kp F12       &kp C_VOL_DN          &kp C_VOLUME_UP        &kp GRAVE
@@ -403,11 +403,11 @@
                               &trans     &trans        &trans             &trans              &trans         &trans
             >;
 
-            label = "raiseLower";
+            label = "func";
         };
 
         Navigation {
-            display-name = "nav";
+            display-name = "xtra";
             bindings = <
 &bt BT_CLR  &none         &none   &none   &none       &bootloader  &bootloader  &none         &none         &none          &none  &trans
 &none       &bt BT_SEL 0  &trans  &trans  &bt BT_PRV  &bt BT_NXT   &none        &none         &kp LA(UP)    &none          &none  &none
@@ -415,11 +415,11 @@
                                   &trans  &trans      &trans       &trans       &trans        &trans
             >;
 
-            label = "nav";
+            label = "xtra";
         };
 
         AutoMouse {
-            display-name = "autoMouse";
+            display-name = "ptr";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MB3  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp F10    &trans     &trans    &trans  &trans  &trans

@@ -4,6 +4,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: billyjacoby
+      url-base: https://github.com/billyjacoby
     - name: petejohanson
       url-base: https://github.com/petejohanson/
     - name: caksoylar
@@ -12,11 +14,12 @@ manifest:
       url-base: https://github.com/geeksville
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: billyjacoby
+      revision: toucan-kscan-suppression
       import: app/west.yml
     - name: cirque-input-module
-      remote: geeksville
-      revision: toucan
+      remote: billyjacoby
+      revision: toucan-circular-scroll
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3

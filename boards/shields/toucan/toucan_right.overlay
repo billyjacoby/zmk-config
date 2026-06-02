@@ -11,6 +11,12 @@
 };
 
 &kscan0 {
+    // Fixes as issue where i may have bridged two keys together, causing the matrix to think a key is always pressed.  This is a bit of a band-aid, but it works.
+    suppress-while-pressed-source-row = <1>;
+    suppress-while-pressed-source-col = <5>;
+    suppress-while-pressed-target-row = <2>;
+    suppress-while-pressed-target-col = <5>;
+
     col-gpios
     = <&gpio1 12 GPIO_ACTIVE_HIGH>
     , <&gpio1 11 GPIO_ACTIVE_HIGH>
@@ -62,8 +68,14 @@
         spi-max-frequency = <1000000>;
         status = "okay";
         dr-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH)>;
-        sensitivity = "2x";
+        sensitivity = "4x";
+        abs-rel-divisor = <5>;
+        circular-scroll;
+        circular-scroll-min-radius = <400>;
+        circular-scroll-max-radius = <1200>;
+        circular-scroll-divisor = <32>;
         x-invert;
+        y-invert;
 
         // Optional: turning this on enables very aggressive power saving, after 5 seconds with no touches
         // the trackpad will go to sleep.  It wakes up on touch, but there is a ~300ms delay.  Most users will find

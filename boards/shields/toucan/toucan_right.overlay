@@ -71,7 +71,8 @@
         sensitivity = "4x";
         abs-rel-divisor = <5>;
         circular-scroll;
-        circular-scroll-min-radius = <400>;
+        circular-scroll-min-radius = <600>;
+        circular-scroll-active-min-radius = <325>;
         circular-scroll-max-radius = <1200>;
         circular-scroll-divisor = <32>;
         x-invert;
